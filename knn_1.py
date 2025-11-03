@@ -5,6 +5,8 @@ information and target their ads accordingly.
 Implement kNN Classifier to determine whether a user will purchase a particular product displayed on a social network ad
 or not.
 '''
+
+
 import pandas as pd
 from sklearn.metrics import accuracy_score
 from sklearn.neighbors import KNeighborsClassifier
@@ -32,11 +34,12 @@ print('Y_train shape:', ytrain.shape)
 print('Y_test shape:', ytest.shape)
 
 # Train kNN Classifier model
-knnsocial=KNeighborsClassifier(n_neighbors=3)
-knnsocial.fit(xtrain,ytrain)
+model=KNeighborsClassifier(n_neighbors=3)
 
-ytrain_pred=knnsocial.predict(xtrain)
-ytest_pred=knnsocial.predict(xtest)
+model.fit(xtrain,ytrain)
+
+ytrain_pred=model.predict(xtrain)
+ytest_pred=model.predict(xtest)
 
 print('Accuracy score of ytrain_pred:', accuracy_score(ytrain,ytrain_pred))
 print('Accuracy score of ytest_pred:', accuracy_score(ytest,ytest_pred))
@@ -44,3 +47,5 @@ print('Accuracy score of ytest_pred:', accuracy_score(ytest,ytest_pred))
 print('classification report:')
 print('Train report:',classification_report(ytrain,ytrain_pred))
 print('Test report:',classification_report(ytest,ytest_pred))
+
+

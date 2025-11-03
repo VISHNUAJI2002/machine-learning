@@ -27,8 +27,7 @@ print(df.head())
 
 X = df.drop('price', axis=1)
 y = df['price']
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33,
-random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33,random_state=42)
 
 y= np.reshape(y_test,(-1,1))
 model = LinearRegression()
