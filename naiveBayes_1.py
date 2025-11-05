@@ -1,5 +1,5 @@
 '''
-Aim: Program to implement NaTve Bayes Algorithm using any standard dataset available in the public domain and find the
+Aim: Program to implement Naive Bayes Algorithm using any standard dataset available in the public domain and find the
 accuracy of the algorithm
 '''
 
@@ -12,7 +12,7 @@ df = pd.read_csv("https://raw.githubusercontent.com/VISHNUAJI2002/Data-set/refs/
 print(df.head())
 print(df.isnull().sum())
 
-features = df.drop(['Species'], axis=1)
+features = df.drop(['Species'],axis=1)
 target = df['Species']
 xtrain, xtest, ytrain, ytest = train_test_split(features, target, test_size=0.2,random_state=42,stratify=target)
 
