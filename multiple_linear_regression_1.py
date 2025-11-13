@@ -50,3 +50,11 @@ print('R2 score = ',r2)
 print('Mean Squared Error = ',mes)
 print('Root Mean Squared Error = ',rmes)
 print('Mean Absolute Error = ',mae)
+
+#Scatter plot
+plt.scatter(y_test, y_pred, color='blue',edgecolors='black')
+plt.xlabel("actual values")
+plt.ylabel("predicted values")
+plt.title("Scatter Plot")
+plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--')
+plt.show()
